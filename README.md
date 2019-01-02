@@ -141,6 +141,31 @@ git push {REMOTE_NAME} {NAME_OF_BRANCH}
 
 + Note: Check [this](https://chris.beams.io/posts/git-commit/#seven-rules) and learn how to write a proper commit message
 
+### How to rebase one branch to another
++ Before rebase make sure feature branch and master is up to date 
++ This sample rebase master into feature branch 
+
+```
+git checkout master
+git pull
+```
+
++ After update master branch now get back feature branch 
+
+```
+git checkout {FEATURE_BRANCH_NAME}
+git rebase -i master
+```
+
++ After this command if two branches has conflict before push resolve the conflicts
+
+```
+git push --f {REMOTE_NAME} {NAME_OF_BRANCH}
+```
+
++ Note: Check [this](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) and learn how to rebase 
+
+
 ### GitLab and SSH key for Command Prompt
 + Go to your computer's shell and type the following command :
 + Mail adresses should be same as GitLab mail address
