@@ -4,6 +4,15 @@
 - [Basic commands](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html)
 - [Android Setup](https://developer.android.com/studio/install)
 - [Git Basic Commit History](https://git-scm.com/book/id/v2/Git-Basics-Viewing-the-Commit-History)
+- [Gradle Project Structure](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure)
+- [How I organize Android project structure](https://medium.com/@rey5137/how-i-organize-android-project-structure-5ed9b849dc30)
+- [Package by features, not layers](https://medium.com/@cesarmcferreira/package-by-features-not-layers-2d076df1964d)
+- [Best practices in Android development by Futurice developers](https://github.com/futurice/android-best-practices)
+- [Code Style for Contributors ](https://source.android.com/source/code-style)
+- [Architecture Guidelines](https://github.com/ribot/android-guidelines/blob/master/architecture_guidelines/android_architecture.md)
+- [Android MVP Architecture: Sample App](https://github.com/MindorksOpenSource/android-mvp-architecture)
+- [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+- [A successful XML naming convention ](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)
 
 
 ### How to import project
@@ -190,7 +199,27 @@ ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 1. If you haven't install Android Studio follow the steps :
   * Go to [Android site](https://developer.android.com/studio/), dowload latest version Android Studio
   * Setup **android-studio-ide.exe**
+  
+# Follow Field Naming Conventions
 
++ Non-public, non-static field names start with m.
+
++ Static field names start with s.
+
++ Other fields start with a lower case letter.
+
++ Public static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
+
+```java
+public class MyClass {
+    public static final int SOME_CONSTANT = 42;
+    public int              publicField;
+    private static MyClass  sSingleton;
+    int                     mPackagePrivate;
+    private int             mPrivate;
+    protected int           mProtected;
+}
+```
 
 # Install Android Studio on Linux
 1. If you haven't install Android Studio follow the steps :
