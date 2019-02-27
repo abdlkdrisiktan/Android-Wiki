@@ -180,6 +180,21 @@ git status
 git reset --hard HEAD~[NUMBER]|[COMMIT_ID]
 ```
 
+### How to delete local or remote branch
++ Before start make sure unpushed commit have it 
++ If you want to delete local branch type the following command 
+
+```
+git branch -d {NAME_OF_BRANCH}
+```
+
++ If you want to delete remote branch type the following command
+
+```
+git push origin -delete {NAME_OF_BRANCH}
+```
+
+
 ### GitLab and SSH key for Command Prompt
 + Go to your computer's shell and type the following command :
 + Mail adresses should be same as GitLab mail address
