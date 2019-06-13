@@ -13,6 +13,7 @@
 - [Android MVP Architecture: Sample App](https://github.com/MindorksOpenSource/android-mvp-architecture)
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [A successful XML naming convention ](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)
+- [Android interview questions](Interview.md)
 
 
 ### How to import project
@@ -142,15 +143,15 @@ git push {REMOTE_NAME} {NAME_OF_BRANCH}
 + Note: Check [this](https://chris.beams.io/posts/git-commit/#seven-rules) and learn how to write a proper commit message
 
 ### How to rebase one branch to another
-+ Before rebase make sure feature branch and master is up to date 
-+ This sample rebase master into feature branch 
++ Before rebase make sure feature branch and master is up to date
++ This sample rebase master into feature branch
 
 ```
 git checkout master
 git pull
 ```
 
-+ After update master branch now get back feature branch 
++ After update master branch now get back feature branch
 
 ```
 git checkout {FEATURE_BRANCH_NAME}
@@ -163,26 +164,26 @@ git rebase -i master
 git push --f {REMOTE_NAME} {NAME_OF_BRANCH}
 ```
 
-+ Note: Check [this](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) and learn how to rebase 
++ Note: Check [this](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) and learn how to rebase
 
 
-### How to reset commit 
-+ Before start make sure unpushed commit have it 
-+ Check your branch status 
+### How to reset commit
++ Before start make sure unpushed commit have it
++ Check your branch status
 
 ```
 git status
 ```
 
-+ After the result you can obtain your commit id or you can show how many commit ahead in current branch 
++ After the result you can obtain your commit id or you can show how many commit ahead in current branch
 
 ```
 git reset --hard HEAD~[NUMBER]|[COMMIT_ID]
 ```
 
 ### How to delete local or remote branch
-+ Before start make sure unpushed commit have it 
-+ If you want to delete local branch type the following command 
++ Before start make sure unpushed commit have it
++ If you want to delete local branch type the following command
 
 ```
 git branch -d {NAME_OF_BRANCH}
@@ -253,7 +254,7 @@ ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 1. If you haven't install Android Studio follow the steps :
   * Go to [Android site](https://developer.android.com/studio/), dowload latest version Android Studio
   * Setup **android-studio-ide.exe**
-  
+
 # Follow Field Naming Conventions
 
 + Non-public, non-static field names start with m.
