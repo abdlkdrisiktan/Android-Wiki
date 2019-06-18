@@ -32,6 +32,18 @@ git clone {URL_GIT} || {URL_HTTPS}
 + should be written in English
 + should be written using markdown
 
+### Display logcat via terminal 
++ Open terminal using ```Ctrl + T```
++ Find emulator or devices want to logcat 
+
+```
+adb devices
+```
++ Note the emulator or devices id
++ Start logcat using this command 
+```
+adb -s {DEVICE_ID} logcat
+```
 
 ### How to create new branch
 + Go to your computer's shell and type the following command :
@@ -97,7 +109,6 @@ get checkout --track {REMOTE_NAME}/{NAME_OF_BRANCH}
 
 ### How to display log history
 + Commit history
-
 
 ```
 git log
