@@ -222,6 +222,21 @@ keytool -printcert -file ANDROID_.RSA
 
 + After this command you can get fingerprints 
 
+### Deploy apk remotely 
++ First connect device through usb 
++ Open terminal and set port, follow this command :
+
+```
+adb tcpip 5555
+```
+
++ Now you can listen 5555 port while same network
++ You don't need to connect with usb 
++ Now connect to device via network
+
+```
+adb connect {DEVICE_INTERNAL_IP:PORT_NUMBER}
+```
 
 ### GitLab and SSH key for Command Prompt
 + Go to your computer's shell and type the following command :
