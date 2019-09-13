@@ -207,6 +207,21 @@ git branch -d {NAME_OF_BRANCH}
 git push origin -delete {NAME_OF_BRANCH}
 ```
 
+### Extract sha key from apk
++ Go to your apk file location
++ Extract apk file, open terminal in apk location and use this command : 
+```
+unzip {APK_NAME} -d {UNZIP_FILE_NAME}
+```
++ Go to /META-INF/ANDROID_.RSA file (this file may also be CERT.RSA, but there should only be one .RSA file).
++ Use command : 
+
+```
+keytool -printcert -file ANDROID_.RSA
+```
+
++ After this command you can get fingerprints 
+
 
 ### GitLab and SSH key for Command Prompt
 + Go to your computer's shell and type the following command :
