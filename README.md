@@ -14,6 +14,7 @@
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [A successful XML naming convention ](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)
 - [Refactoring & Design Patterns](https://refactoring.guru/)
+- [Display and control your Android device](https://github.com/Genymobile/scrcpy)
 - [Android interview questions](Interview.md)
 
 
