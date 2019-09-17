@@ -223,6 +223,24 @@ keytool -printcert -file ANDROID_.RSA
 
 + After this command you can get fingerprints 
 
+### Create static web server for the get http request
++ First install the http-server
+
+```
+sudo npm install -g http-server
+```
+
++ After installed http server create new folder
++ Create new .json file inside the folder
++ {FILE_NAME}.json and add json text inside the document
++ Start http server using this command
+
+```
+http-server .
+```
++ '.' means is read all file inside the folder
++ Http server will start on localhost
+
 ### Deploy apk remotely 
 + First connect device through usb 
 + Open terminal and set port, follow this command :
