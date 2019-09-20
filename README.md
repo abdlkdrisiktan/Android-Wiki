@@ -208,6 +208,32 @@ git branch -d {NAME_OF_BRANCH}
 git push origin -delete {NAME_OF_BRANCH}
 ```
 
+### Create keytool file for signing apk 
++ Open the terminal and type this command 
+```
+keytool -genkey -v -keystore {KEYSTORE_FILE_NAME}.keystore -alias {ALIAS_NAME} -keyalg RSA -keysize 2048 -validity 10000
+```
++ After this command terminal wants to more information about who create this file and company name
++ Answer the questions 
++ Create uniq key password and store password 
++ Don't forget the password after created file you will use
++ Move the keytool file inside the /project/app folder 
++ In your app.gradle file you need to replace keytool file and passwords
+
+```Groovy
+  signingConfigs {
+        debug {
+           storeFile file("{KEYSTORE_FILE_NAME}.keystore")
+            keyAlias "{ALIAS_NAME}"
+            keyPassword "{KEY_PASSWORD}"
+            storePassword "{STORE_PASSWORD}"
+        }
+    }
+```
++ Sync gradle file
++ Now you can check your build variant on left bottom side bar in Android Studio 
++ You will see the all variants, select one of them and build your apk
+
 ### Extract sha key from apk
 + Go to your apk file location
 + Extract apk file, open terminal in apk location and use this command : 
