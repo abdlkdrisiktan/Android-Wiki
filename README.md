@@ -78,6 +78,12 @@ git checkout NAME_OF_BRANCH
 git merge NAME_OF_BRANCH
 ```
 
+### Delete all unmerged local branches
+
+```
+git branch --merged | grep -v \* | xargs git branch -D 
+```
+
 ### How to add a remote repo
 + To add new remote
 
