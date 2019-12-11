@@ -297,7 +297,19 @@ adb connect {DEVICE_INTERNAL_IP:PORT_NUMBER}
 ```
 ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 ```
+
 + Locating an existing SSH key
++ You can copy sha key to clipboard for Windows
+
+```
+notepad ~/.ssh/id_rsa.pub  
+```
+
++ For OS
+
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
 
 
 ```
