@@ -13,8 +13,8 @@
 - [Android MVP Architecture: Sample App](https://github.com/MindorksOpenSource/android-mvp-architecture)
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [A successful XML naming convention ](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)
-- [Android interview questions](Interview.md)
-
+- [Android interview questions](AndroidInterview.md)
+- [Java Interview questions](JavaInterview.md)
 
 ### How to import project
 
