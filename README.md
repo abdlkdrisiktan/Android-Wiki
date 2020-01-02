@@ -13,6 +13,8 @@
 - [Android MVP Architecture: Sample App](https://github.com/MindorksOpenSource/android-mvp-architecture)
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [A successful XML naming convention ](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)
+- [Refactoring & Design Patterns](https://refactoring.guru/)
+- [Display and control your Android device](https://github.com/Genymobile/scrcpy)
 - [Android interview questions](AndroidInterview.md)
 - [Java Interview questions](JavaInterview.md)
 
@@ -32,6 +34,18 @@ git clone {URL_GIT} || {URL_HTTPS}
 + should be written in English
 + should be written using markdown
 
+### Display logcat via terminal 
++ Open terminal using ```Ctrl + T```
++ Find emulator or devices want to logcat 
+
+```
+adb devices
+```
++ Note the emulator or devices id
++ Start logcat using this command 
+```
+adb -s {DEVICE_ID} logcat
+```
 
 ### How to create new branch
 + Go to your computer's shell and type the following command :
@@ -62,6 +76,12 @@ git checkout NAME_OF_BRANCH
 
 ```
 git merge NAME_OF_BRANCH
+```
+
+### Delete all unmerged local branches
+
+```
+git branch --merged | grep -v \* | xargs git branch -D 
 ```
 
 ### How to add a remote repo
@@ -97,7 +117,6 @@ get checkout --track {REMOTE_NAME}/{NAME_OF_BRANCH}
 
 ### How to display log history
 + Commit history
-
 
 ```
 git log
@@ -195,6 +214,80 @@ git branch -d {NAME_OF_BRANCH}
 git push origin -delete {NAME_OF_BRANCH}
 ```
 
+### Create keytool file for signing apk 
++ Open the terminal and type this command 
+```
+keytool -genkey -v -keystore {KEYSTORE_FILE_NAME}.keystore -alias {ALIAS_NAME} -keyalg RSA -keysize 2048 -validity 10000
+```
++ After this command terminal wants to more information about who create this file and company name
++ Answer the questions 
++ Create uniq key password and store password 
++ Don't forget the password after created file you will use
++ Move the keytool file inside the /project/app folder 
++ In your app.gradle file you need to replace keytool file and passwords
+
+```Groovy
+  signingConfigs {
+        debug {
+           storeFile file("{KEYSTORE_FILE_NAME}.keystore")
+            keyAlias "{ALIAS_NAME}"
+            keyPassword "{KEY_PASSWORD}"
+            storePassword "{STORE_PASSWORD}"
+        }
+    }
+```
++ Sync gradle file
++ Now you can check your build variant on left bottom side bar in Android Studio 
++ You will see the all variants, select one of them and build your apk
+
+### Extract sha key from apk
++ Go to your apk file location
++ Extract apk file, open terminal in apk location and use this command : 
+```
+unzip {APK_NAME} -d {UNZIP_FILE_NAME}
+```
++ Go to /META-INF/ANDROID_.RSA file (this file may also be CERT.RSA, but there should only be one .RSA file).
++ Use command : 
+
+```
+keytool -printcert -file ANDROID_.RSA
+```
+
++ After this command you can get fingerprints 
+
+### Create static web server for the get http request
++ First install the http-server
+
+```
+sudo npm install -g http-server
+```
+
++ After installed http server create new folder
++ Create new .json file inside the folder
++ {FILE_NAME}.json and add json text inside the document
++ Start http server using this command
+
+```
+http-server .
+```
++ '.' means is read all file inside the folder
++ Http server will start on localhost
+
+### Deploy apk remotely 
++ First connect device through usb 
++ Open terminal and set port, follow this command :
+
+```
+adb tcpip 5555
+```
+
++ Now you can listen 5555 port while same network
++ You don't need to connect with usb 
++ Now connect to device via network
+
+```
+adb connect {DEVICE_INTERNAL_IP:PORT_NUMBER}
+```
 
 ### GitLab and SSH key for Command Prompt
 + Go to your computer's shell and type the following command :
@@ -204,7 +297,19 @@ git push origin -delete {NAME_OF_BRANCH}
 ```
 ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 ```
+
 + Locating an existing SSH key
++ You can copy sha key to clipboard for Windows
+
+```
+notepad ~/.ssh/id_rsa.pub  
+```
+
++ For OS
+
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
 
 
 ```
