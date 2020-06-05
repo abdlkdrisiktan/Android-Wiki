@@ -186,6 +186,11 @@ git push --f {REMOTE_NAME} {NAME_OF_BRANCH}
 + Note: Check [this](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) and learn how to rebase
 
 
+### Delete remove and changes file
+```
+git clean -d -f
+
+
 ### How to reset commit
 + Before start make sure unpushed commit have it
 + Check your branch status
