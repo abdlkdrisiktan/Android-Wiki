@@ -189,6 +189,8 @@ git push --f {REMOTE_NAME} {NAME_OF_BRANCH}
 ### Delete remove and changes file
 ```
 git clean -d -f
+```
+
 
 
 ### How to reset commit
