@@ -410,3 +410,9 @@ public class MyClass {
   * After select SDK platform click **SDK Tools**
   * Must be select **Google Play services**, **Android SDK Build Tools**, **Android Emulator** and **Android SDK platform Tools**
   * After selected items click **Apply** and  **Ok** close window
+
+# Android SVG to Vector Image
++ This links will convert your .svg file to vector image
+ * [This page](http://inloop.github.io/svg2android/) for svg to Vector Drawable
+ * [This page](https://romannurik.github.io/) for android application icon
+ 
