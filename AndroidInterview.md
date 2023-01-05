@@ -42,3 +42,7 @@ bu kısmı hazırlamayı unutma
 ### Android Architecture Components nelerdir ?
 
 ### WorkManager nedir ?
+
+### @Volatile nedir? 
+Volatile kelime anlamı olarak geçici demek ve bu annotation belirlediğimiz değişken değerini kullanan iş parçasına bir anca doldurması ve diğer threadlerin kullanması için izin verir.
+The @Volatile annotation will mark the JVM backing field of the annotated property as volatile. Thus, the writes to this field are immediately made visible to other threads
