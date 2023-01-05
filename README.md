@@ -17,6 +17,7 @@
 - [Display and control your Android device](https://github.com/Genymobile/scrcpy)
 - [Android interview questions](AndroidInterview.md)
 - [Java Interview questions](JavaInterview.md)
+- [Kotlin Interview Questions](KotlinInterview.md)
 
 ### How to import project
 
