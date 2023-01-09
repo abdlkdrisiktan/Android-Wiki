@@ -35,3 +35,40 @@ Things to consider when we use the lazy property:
 
 • Must understand that it only creates the object when we access it for the very first time and then in the subsequent access, it returns the same object.
 
+### What is Dispatchers in Kotlin?
+
+Dispatchers in Kotlin Coroutines are like Schedulers in RxJava. There are 4 type of dispatchers have;
+
++ Dispatchers.Default
+
+    * Doing heavy calculations
+    
+    * Doing any operations on bigger list present in memory; sorting, filtering, searching
+    
+    * Parsing JSON
+    
+    * You can not reading disk or drawing something on the view these fucntions have to be in main dispatchers.
+    
+    * Finally, if you have CPU-intensive task than you can use Dispatchers.Default.
+
++ Dispatchers.IO
+    * Perform disk or network I/O related tasks.
+    
+    * Any network operations like making a netwwork call
+    
+    * Creating file or compressing file or moving file
+    
+    * Reading and writing a file
+    
+    * Reading database query
+
++ Dispatchers.Main
+
+    * Performing UI-Related tasks
+
++ Dispatchers.Unconfined
+    * If you dont care about the thread on which it should run
+
+    
+
+
